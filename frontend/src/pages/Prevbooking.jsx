@@ -2,18 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Sidebar } from "../components/Userdashboard/index";
 import axios from '../axios/axiosConfig';
 import toast from 'react-hot-toast';
+import { useDispatch } from "react-redux";
+import { showLoading,hideLoading } from '../redux/alertSlice';
 
 function Prevbooking() {
   const [bookings, setBookings] = useState([]);
-
+  const dispatch= useDispatch();
   const fetchBookings = async () => {
     try {
       const token = localStorage.getItem('token');
+      dispatch(showLoading());
       const response = await axios.get('/api/user/user-bookings', {
         headers: {
           Authorization: `Bearer ${token}`
         }
       });
+      dispatch(hideLoading());
       if (response.data.success) {
         // Sort bookings by date in descending order (most recent first)
         const sortedBookings = response.data.bookings.sort((a, b) => new Date(b.date) - new Date(a.date));

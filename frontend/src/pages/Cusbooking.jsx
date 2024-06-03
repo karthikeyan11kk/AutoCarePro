@@ -86,9 +86,9 @@ function Cusbooking() {
               <tbody>
                 {filteredBookings.map((booking, index) => (
                   <tr key={booking._id} className={`border-t text-center ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-gray-100`}>
-                    <td className="py-2 px-4 border">{booking.userId.username}</td>
-                    <td className="py-2 px-4 border">{booking.userId.email}</td>
-                    <td className="py-2 px-4 border">{booking.userId.phone}</td>
+                    <td className="py-2 px-4 border">{booking.userId?.username}</td>
+                    <td className="py-2 px-4 border">{booking.userId?.email}</td>
+                    <td className="py-2 px-4 border">{booking.userId?.phone}</td>
                     <td className="py-2 px-4 border">{booking.vehicleNumber}</td>
                     <td className="py-2 px-4 border">{new Date(booking.date).toLocaleDateString()}</td>
                     <td className="py-2 px-4 border">{booking.time}</td>

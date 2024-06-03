@@ -6,7 +6,9 @@ import { logo } from "../../assets";
 function Sidebar({ children }) {
     const location = useLocation();
     const navigate = useNavigate();
-    const { user } = useSelector((state) => state.user);
+    const { user }= useSelector((state) => state.user);
+    const userId =user[0];
+    console.log(userId);
 
     const userMenu = [
         { name: "Home", path: "/userdashboard", icon: "" },
@@ -21,7 +23,7 @@ function Sidebar({ children }) {
         { name: "Profile", path: "/adminprofile", icon: "" },
     ];
 
-    const menuRender = user?.isAdmin ? adminMenu : userMenu;
+    const menuRender = userId?.isAdmin ? adminMenu : userMenu;
 
     return (
         <div className="main p-2 h-screen">
@@ -32,7 +34,7 @@ function Sidebar({ children }) {
                         <h1 className="text-[30px] text-center font-semibold">
                             AutoCarePro
                         </h1>
-                        <p className="text-white mt-2">Hi {user?.username}</p>
+                        <p className="text-white mt-2">Hi {userId?.username}</p>
                     </div>
                     <div className="menu mt-10">
                         {menuRender.map((menu, index) => {
