@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
     }
 
     // Check if user already exists
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.find({ email });
     if (existingUser) {
       return res
         .status(400)
@@ -63,7 +63,7 @@ router.post("/login", async (req, res) => {
     }
 
     // Check for existing user
-    const user = await User.findOne({ email });
+    const user = await User.find({ email });
     if (!user) {
       return res
         .status(400)
@@ -103,7 +103,7 @@ router.post("/login", async (req, res) => {
 router.get("/get_info_userid", Auth, async (req, res) => {
   try {
     const { userId } = req.body;
-    const user = await User.findOne({ _id: userId });
+    const user = await User.find({ _id: userId });
     if (!user) {
       return res
         .status(404)
