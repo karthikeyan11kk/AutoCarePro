@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
     }
 
     // Check if user already exists
-    const existingUser = await User.find({ email });
+    const existingUser = await User.findOne({ email:email});
     if (existingUser) {
       return res
         .status(400)
@@ -46,13 +46,9 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// @route   POST /api/user/login
-// @desc    Login user and return JWT token
-// @access  Public
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  console.log("in login");
 
   try {
     // Validate input
@@ -63,7 +59,7 @@ router.post("/login", async (req, res) => {
     }
 
     // Check for existing user
-    const user = await User.find({ email });
+    const user = await User.findOne({email:email});
     if (!user) {
       return res
         .status(400)
