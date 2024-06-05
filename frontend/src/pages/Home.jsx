@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../style"
-import {Navbar,Hero,Stats,Function,CardDeal,Quality,Species,Exists,Map,Testimonials,Footer} from "../components/Landingpage/index"
+import {Navbar,Hero,Stats,Function,CardDeal,Quality,Process,Explore,Contact,Brand,Footer} from "../components/Landingpage/index"
 
 
 export const Home = () => {
@@ -22,12 +22,11 @@ export const Home = () => {
       <div className={`${styles.boxWidth}`}>
         <Function />
         <Quality />
-        <Exists />
-        <Map/>
+        <Explore />
         <Stats/>
         <CardDeal />
-        <Testimonials />
-        <Species />
+        <Process />
+        <Contact/>
         <Footer />
       </div>
     </div>

@@ -14,8 +14,7 @@ const FeatureCard = ({ title, content, index }) => (
   </div>
 );
 
-
-const Testimonials = () => (
+const Process = () => (
   <section className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
       <div className={`${layout.sectionInfo} relative `}>
       <h2 className={`${styles.heading2}`}>
@@ -33,4 +32,4 @@ const Testimonials = () => (
   </section>
 );
 
-export default Testimonials;
+export default Process;

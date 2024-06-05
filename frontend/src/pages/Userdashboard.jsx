@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "../axios/axiosConfig";
 import { Sidebar } from "../components/Userdashboard/index";
-import {Function,CardDeal,Quality,Exists,} from "../components/Landingpage/index"
+import {Function,CardDeal,Quality,Explore} from "../components/Landingpage/index"
 
 const Userdashboard = () => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const Userdashboard = () => {
     <Sidebar>
         <Function />
         <Quality />
-        <Exists />
+        <Explore />
         <CardDeal/>
     </Sidebar>
   );

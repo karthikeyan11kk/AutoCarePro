@@ -16,6 +16,13 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="flex items-center">
+        <ul className="hidden sm:flex list-none justify-end items-center"> 
+<li>        <Link
+          className={`font-poppins font-bold cursor-pointer text-base mr-6`}
+          to="/" >
+          Home
+        </Link></li>
+        </ul>
         <ul className="hidden sm:flex list-none justify-end items-center">
           {navLinks.map((nav) => (
             <li

@@ -1,26 +1,26 @@
 import Navbar from "./Navbar";
-import Species from "./Species";
+import Brand from "./Explore";
 import CardDeal from "./CardDeal";
 import Function from "./Function";
-import Exists from "./Exists";
+import Contact from "./Contact";
 import Stats from "./Stats";
 import Footer from "./Footer";
-import Testimonials from "./Testimonials";
+import Process from "./Process";
 import Hero from "./Hero";
-import Map from "./Map";
+import Explore from "./Explore";
 import Quality from "./Quality"
 import Image from "./Image"
 export {
   Navbar,
   Quality,
   Image,
-  Species,
+  Contact,
   CardDeal,
   Function,
-  Exists,
+  Brand,
   Stats,
   Footer,
-  Map,
-  Testimonials,
+  Explore,
+  Process,
   Hero
 };

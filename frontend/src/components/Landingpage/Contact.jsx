@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { layout } from "../../style";
 import {contact } from "../../assets";
-const Species = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -18,7 +18,7 @@ const Species = () => {
   };
 
   return (
-    <section id="species" className={`${layout.sectionReverseinfo} py-12 mb-10`}>
+    <section id="contact" className={`${layout.sectionReverseinfo} py-12 mb-10`}>
       <div className={layout.sectionImgReverse}>
         <img src={contact} alt="Lside" className="w-[80%] h-[80%] relative z-[5]" />
       </div>
@@ -57,4 +57,4 @@ const Species = () => {
 };
 
 
-export default Species;
+export default Contact;

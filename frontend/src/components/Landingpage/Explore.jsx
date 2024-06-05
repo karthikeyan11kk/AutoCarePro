@@ -2,8 +2,8 @@ import { service } from "../../assets";
 import { layout } from "../../style";
 import { Exists1 } from "./info";
 
-const Exists = () => (
-  <section className={layout.sectionFunction}>
+const Explore = () => (
+  <section id="service" className={layout.sectionFunction}>
     <div className={`${layout.sectionInfo} py-5 ml-10`}>
       <h1 className="font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-yellowpro mb-5">
       EXPERIENCE THE DIFFERENCE AT Best Car Services
@@ -27,4 +27,4 @@ const Exists = () => (
   </section>
 );
 
-export default Exists;
+export default Explore;

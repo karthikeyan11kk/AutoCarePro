@@ -4,7 +4,7 @@ import Button from './Button';
 import { feedback } from './info';
 import FeedbackCard from './FeedbackCard';
 
-const Map = () => {
+const Brand = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = feedback.length;
 
@@ -52,4 +52,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default Brand;

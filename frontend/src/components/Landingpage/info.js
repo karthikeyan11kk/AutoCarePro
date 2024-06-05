@@ -2,10 +2,6 @@ import {facebook,instagram,twitter,car1,car2,car3,car4,car5,car6,cb1,cb2,cb3,cb4
 
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
-  },
-  {
     id: "about",
     title: "About",
   },
@@ -14,8 +10,8 @@ export const navLinks = [
     title: "Service",
   },
   {
-    id: "population",
-    title: "Population",
+    id: "contact",
+    title: "Contact",
   },
 ];
 
