@@ -55,7 +55,9 @@ AutoCarePro is a simple web application designed to streamline the process of bo
 Ensure you have the following installed:
 - Node.js
 - npm (Node Package Manager)
-- MongoDB 
+- MongoDB
+
+Add the necessary npm packages 
 
 # Installation
 
