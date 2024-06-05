@@ -164,6 +164,25 @@ router.get('/all-bookings',Auth, async (req, res) => {
   }
 });
 
-
+router.put('/updateprofile',Auth, async (req, res) => {
+  try {
+    const { userId } = req.body;
+    console.log(userId);
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    user.name = req.body.name || user.name;
+    user.email = req.body.email || user.email;
+    user.phone = req.body.phone || user.phone;
+    if (req.body.password) {
+      user.password = req.body.password; 
+    }
+    const updatedUser = await user.save();
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;

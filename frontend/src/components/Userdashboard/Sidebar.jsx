@@ -8,8 +8,6 @@ function Sidebar({ children }) {
     const navigate = useNavigate();
     const { user }= useSelector((state) => state.user);
     const userId =user[0];
-    console.log(userId);
-
     const userMenu = [
         { name: "Home", path: "/userdashboard", icon: "" },
         { name: "Book Service", path: "/bookslot", icon: "" },
