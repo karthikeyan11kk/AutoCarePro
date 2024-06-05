@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "../axios/axiosConfig";
 import { Sidebar } from "../components/Userdashboard/index";
+import {Function,CardDeal,Quality,Exists,} from "../components/Landingpage/index"
 
 const Userdashboard = () => {
   useEffect(() => {
@@ -18,7 +19,10 @@ const Userdashboard = () => {
   }, []);
   return (
     <Sidebar>
-      <h1>Hello</h1>
+        <Function />
+        <Quality />
+        <Exists />
+        <CardDeal/>
     </Sidebar>
   );
 };

@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { layout } from "../style";
 
-function Userprofile() {
+function Adminprofile() {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -51,7 +51,7 @@ function Userprofile() {
   return (
     <Sidebar>
       <div className="mt-3 p-2">
-      <h2 className="text-2xl font-bold mb-4">User Profile </h2>
+      <h2 className="text-2xl font-bold mb-4">Admin Profile </h2>
         <hr className="mb-4"></hr>
       </div>
 
@@ -140,4 +140,4 @@ function Userprofile() {
   );
 }
 
-export default Userprofile;
+export default Adminprofile;

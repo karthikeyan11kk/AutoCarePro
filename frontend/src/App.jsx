@@ -12,6 +12,8 @@ import { useSelector,} from "react-redux";
 import Protected from "./redux/Protected";
 import Public from "./redux/Public";
 import Userprofile from "./pages/Userprofile"
+import Adminhome from "./pages/Adminhome"
+import Adminprofile from "./pages/Adminprofile"
 
 const App = () => {
   const {loading}= useSelector(state=>state.alerts);
@@ -40,6 +42,10 @@ const App = () => {
           <Route path="/cusBook" element={<Protected><Cusbooking/>
           </Protected>}/>
           <Route path="/userprofile" element={<Protected><Userprofile/>
+          </Protected>}/>
+          <Route path="/adminhome" element={<Protected><Adminhome/>
+          </Protected>}/>
+          <Route path="/adminprofile" element={<Protected><Adminprofile/>
           </Protected>}/>
       </Routes>
   </BrowserRouter>
